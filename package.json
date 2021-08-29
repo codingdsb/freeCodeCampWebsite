@@ -1,0 +1,20 @@
+{
+  "name": "freecodecamp-website-tailwind",
+  "version": "1.0.0",
+  "description": "A website for freecodecamp using tailwind css",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "tailwindcss -i src/tailwind.css -o public/style.css",
+    "dev": "live-server public",
+    "mob-dev": "live-server public --host=0.0.0.0"
+  },
+  "author": "Darshan Bajeja",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "live-server": "^1.2.1"
+  }
+}
