@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeCamp Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar starts here -->
+
+    <nav
+      class="
+        bg-primary
+        h-14
+        flex
+        justify-between
+        px-4
+        items-center
+        flex-column
+        sticky
+        top-0
+      "
+    >
+      <a class="text-white font-roboto-mono md:text-4xl text-lg" href="/">
+        freeCodeCamp(🔥)
+      </a>
+
+      <img
+        src="assets/hamburger.svg"
+        class="h-6 w-6 cursor-pointer"
+        id="burger"
+      />
+    </nav>
+
+    <!-- Navbar ends here -->
+
+    <!-- Drawer starts here -->
+
+    <div
+      id="drawer"
+      class="
+        w-0
+        h-full
+        bg-primary
+        fixed
+        z-10
+        left-0
+        top-0
+        overflow-x-hidden
+        duration-700
+      "
+    >
+      <img
+        src="assets/close.svg"
+        class="h-8 w-8 cursor-pointer mr-4 mt-4 float-right"
+        id="close"
+      />
+      <ul
+        class="
+          text-2xl text-white
+          list-none
+          relative
+          top-24
+          w-full
+          mx-12
+          md:text-3xl
+          font-roboto-mono
+        "
+      >
+        <li class="py-4 md:py-8 block">
+          <a href="#" class="hover:text-yellow-500" onclick="closeDrawer()"
+            >HOME</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a href="#about" class="hover:text-yellow-500" onclick="closeDrawer()"
+            >ABOUT</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a
+            href="#videos"
+            class="hover:text-yellow-500"
+            onclick="closeDrawer()"
+            >VIDEOS</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a href="#beau" class="hover:text-yellow-500" onclick="closeDrawer()"
+            >BEAU CARNES</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a
+            href="#curriculum"
+            class="hover:text-yellow-500"
+            onclick="closeDrawer()"
+            >CURRICULUM</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a
+            href="https://www.youtube.com/freecodecamp"
+            class="hover:text-yellow-500"
+            onclick="closeDrawer()"
+            >YOUTUBE</a
+          >
+        </li>
+        <li class="py-4 md:py-8 block">
+          <a
+            href="https://freecodecamp.org"
+            class="hover:text-yellow-500"
+            onclick="closeDrawer()"
+            >WEBSITE</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Drawer ends here -->
+
+    <!-- video modal starts here -->
+
+    <div
+      id="overlay"
+      class="
+        hidden
+        h-screen
+        w-screen
+        justify-center
+        items-center
+        bg-primary bg-opacity-90
+        fixed
+        z-10
+      "
+    >
+      <div id="modal" class="w-full xl:w-2/5 h-3/5 bg-white">
+        <img
+          src="assets/close.svg"
+          class="h-8 w-8 cursor-pointer mr-4 mt-4 float-right"
+          id="closeModal"
+        />
+        <div
+          class="flex h-full w-full items-center justify-center top-0 pb-16"
+          id="modalContainer"
+        ></div>
+      </div>
+    </div>
+
+    <!--- Video modal ends here -->
+
+    <!-- Main content starts here -->
+
+    <div class="my-16">
+      <!-- About section starts here -->
+
+      <section id="about" class="font-poppins md:m-48 m-8">
+        <section class="xl:w-8/12 w-full">
+          <p class="md:text-7xl text-3xl font-roboto-mono">
+            Learn Coding For Free!
+          </p>
+          <p class="md:text-4xl md:mt-8 text-2xl mt-4">
+            From no coding experience to a skilled coder!
+          </p>
+          <p class="md:text-xl md:mt-8 text-lg mt-4 text-justify">
+            FreeCodeCamp is a platform that teaches you almost every aspect of
+            programming. The official website of freecodecamp (<a
+              href="freecodecamp.org"
+              class="text-yellow-500"
+              >freecodecamp.org</a
+            >) has a <a href="#curriculum" class="text-yellow-500">3000 hour curriculum</a> which teaches you programming from
+            scratch till the end with data structures and algorithms, webdev, data science, socket programming, machine learning and interview preapration using
+            javascript and python! On their youtube channel,
+            <a href="https://youtube.com/freecodecamp" class="text-yellow-500"
+              >freeCodeCamp.org</a
+            >
+            as well they have over a thousand video courses by themselves, as
+            well as hundreds of other youtube programming course creators, also
+            some courses, which are actually paid on other platforms. On their
+            youtube channel they cover almost all of the tech-topics like basics
+            of programming, web development, UI/UX, wordpress websites,
+            mathematics mobile app development, desktop app development, version
+            control, cross-platform technologies, arduino programming, security,
+            ethical hacking, AI, machine learning, data science, IOT,
+            blockchain, OS, data strcutures algorithms, cloud computing,
+            application/website deployment, game development and even building a
+            hackintosh, which is a computer with non-apple hardware, running
+            macOS.
+          </p>
+        </section>
+      </section>
+
+      <!-- About section ends here -->
+
+      <!-- Videos section starts here -->
+
+      <section id="videos" class="font-poppins p-16">
+        <p class="text-center font-roboto-mono lg:text-5xl text-xl">
+          Featured Videos- Click on any image to watch a video
+        </p>
+
+        <div
+          class="
+            lg:p-12
+            xl:grid xl:grid-cols-4
+            flex flex-col
+            items-center
+            justify-center
+          "
+        >
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('__izua1kKeI')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/__izua1kKeI/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('04L0BbAcCpQ')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/04L0BbAcCpQ/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('RBSGKlAvoiM')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/RBSGKlAvoiM/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('LsNW4FPHuZE')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/LsNW4FPHuZE/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('MXnaUkmLXok')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/MXnaUkmLXok/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('3Kq1MIfTWCE')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/3Kq1MIfTWCE/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('wfWxdh-_k_4')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/wfWxdh-_k_4/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('Ia-UEYYR44s')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/Ia-UEYYR44s/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('c9Wg6Cb_YlU')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/c9Wg6Cb_YlU/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('tPYj3fFJGjk')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/tPYj3fFJGjk/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('F-sFp_AvHc8')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/F-sFp_AvHc8/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+
+          <div
+            class="p-6 shadow-lg m-4 cursor-pointer bg-white"
+            onclick="openVideoModal('xxpc-HPKN28')"
+          >
+            <img
+              src="http://i3.ytimg.com/vi/xxpc-HPKN28/maxresdefault.jpg"
+              class="h-90 lg:h-52 shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Videos section ends here -->
+
+      <!-- Beau Carnes sectoion starts here -->
+      <section
+        id="beau"
+        class="
+          font-poppins
+          p-16
+          flex
+          w-full
+          h-full
+          lg:items-center
+          flex-col
+          lg:flex-row
+          bg-primary
+          text-white
+        "
+      >
+        <div class="w-full lg:w-2/5">
+          <p class="text-3xl text-center font-bold mb-16 block lg:hidden">
+            BEAU CARNES
+          </p>
+          <img src="assets/beau.png" class="lg:h-80 lg:w-80 h-64 w-64 mb-4" />
+        </div>
+        <div class="lg:w-3/5">
+          <p class="text-4xl font-bold mb-16 hidden lg:block">BEAU CARNES</p>
+          <p class="lg:text-xl text-justify">
+            Beau Carnes is the person who manages the freeCodeCamp.org youtube
+            channel. He also has created many courses for the channel himself on
+            HTML, JavaScript, Data Structures, WordPress and Web hosting. He has
+            also created a
+            <a
+              href="https://www.youtube.com/watch?v=Gaosub7FRf4"
+              class="text-yellow-500"
+              >course on building hackintosh!</a
+            >
+            He teaches very well and you will enjoy watching his courses.
+          </p>
+        </div>
+      </section>
+      <!-- Beau Carnes sectoion ends here -->
+
+      <!-- CURRICULUM section starts here -->
+      <div id="curriculum" class="font-poppins p-8 lg:p-16">
+        <p class="xl:text-4xl text-xl text-primary mb-16">
+          Here's what you'll learn in the freeCodeCamp curriculum:
+        </p>
+        
+
+        <div class="w-full h-full flex flex-col justify-center items-center">
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">HTML</p>
+            <p class="text-xl text-white">
+              HTML is the language that makes up the structure of web pages.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">CSS</p>
+            <p class="text-xl text-white">
+              CSS is the language that makes up the styling of web pages.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full ">
+            <p class="text-3xl text-yellow-500">Responsive Web Design</p>
+            <p class="text-xl text-white">
+              Responsive web design is a web design technique that makes web pages more usable on different screen sizes.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">JavaScript</p>
+            <p class="text-xl text-white">
+              JavaScript is the language that makes up the client side functionality of web.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Data Structures and Algorithms with JavaScript</p>
+            <p class="text-xl text-white">
+              Data Structures and Algorithms help you to learn how to optimize your code and make your apps faster and more efficient.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Bootstrap</p>
+            <p class="text-xl text-white">
+              Bootstrap is a CSS framework that makes it easy to create responsive, mobile-first web sites.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">jQuery</p>
+            <p class="text-xl text-white">
+              jQuery is a JavaScript library that makes it easier to use JavaScript on web pages.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Sass</p>
+            <p class="text-xl text-white">
+              Sass is a CSS pre-processor that makes it easy to create stylesheets for web pages.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">React</p>
+            <p class="text-xl text-white">
+              React is a JavaScript library that makes it easy to create user interfaces.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Redux</p>
+            <p class="text-xl text-white">
+              Redux is a JavaScript library that helps you manage state in your apps.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">React-Redux</p>
+            <p class="text-xl text-white">
+              React-Redux is a JavaScript library that helps you manage state in your React apps.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Data Structures and Algorithms with JavaScript</p>
+            <p class="text-xl text-white">
+              Data Structures and Algorithms help you to learn how to optimize your code and make your apps faster and more efficient.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">D3</p>
+            <p class="text-xl text-white">
+              D3 is a JavaScript library that makes it easy to create visualizations.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">JSON APIs and AJAX</p>
+            <p class="text-xl text-white">
+              JSON APIs and AJAX are a set of tools that help you communicate with web servers.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Managing Packages with NPM</p>
+            <p class="text-xl text-white">
+              NPM is a package manager for JavaScript.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Basic Node and Express</p>
+            <p class="text-xl text-white">
+              Node is a JavaScript runtime built on Chrome's V8 JavaScript engine. Express is a web application framework for Node.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">MongoDB and Mongoose</p>
+            <p class="text-xl text-white">
+              MongoDB is a document-oriented database. Mongoose is a MongoDB object modeling tool.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Quality Assurance and Testing with Chai</p>
+            <p class="text-xl text-white">
+              Chai is a JavaScript testing library that helps you confirm that your program still behaves the way you expect it to after you make changes to your code.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Advanced Node and Express</p>
+            <p class="text-xl text-white">
+              A deeper dive into Node and Express. 
+            </p>
+          </div>
+          
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Python For Everybody Course</p>
+            <p class="text-xl text-white">
+              Python for everybody is a free video course series that teaches the basics of using Python 3.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Data Analysis With Python</p>
+            <p class="text-xl text-white">
+              Comprehensive video series teaching you how to use Python to analyze data.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Numpy</p>
+            <p class="text-xl text-white">
+              Numpy is a Python package for working with arrays.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Information Security with Helmet JS</p>
+            <p class="text-xl text-white">
+              Helmet JS is a JavaScript library that helps you secure your web applications.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Python for Penetration Testing</p>
+            <p class="text-xl text-white">
+              A course on Penetration Testing with Python
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Tensorflow</p>
+            <p class="text-xl text-white">
+              Tensorflow is a deep learning library, widely used with Python.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">How Neural Networks Work?</p>
+            <p class="text-xl text-white">
+              Neural networks are a type of artificial intelligence that can be used to learn and predict.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-primary border-4 border-primary bg-opacity-80 rounded-lg p-4 lg:w-4/5 my-4 w-full">
+            <p class="text-3xl text-yellow-500">Coding Interview Preparation</p>
+            <p class="text-xl text-white">
+              A course on coding interview preparation.
+            </p>
+          </div>
+
+        </div>
+
+        </div>
+          
+      </section>
+      <!-- CURRICULUM section ends here -->
+    </div>
+
+    <!-- Main content ends here -->
+  </body>
+  <script src="script.js"></script>
+</html>
